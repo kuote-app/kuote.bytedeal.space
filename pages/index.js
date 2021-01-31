@@ -1,8 +1,9 @@
+import Head from "next/head";
 import "tailwindcss/tailwind.css";
 
 const Image = ({ path }) => (
   <div
-    className="rounded-lg"
+    className="m-2 rounded-lg"
     style={{
       backgroundImage: `url(${path})`,
       height: 540,
@@ -13,10 +14,14 @@ const Image = ({ path }) => (
 
 const Preview = () => (
   <div className="min-h-screen flex flex-col items-center justify-center bg-pink-100">
+    <Head>
+      <title>Kuote</title>
+    </Head>
+
     <div className="text-2xl text-gray-700 m-7">
       Beautiful pictures with quotes of great people
     </div>
-    <div className="flex flex-row flex-wrap justify-center md:space-x-4">
+    <div className="flex flex-row flex-wrap justify-center">
       <Image path="preview1.png" />
       <Image path="preview2.png" />
       <Image path="preview3.png" />
